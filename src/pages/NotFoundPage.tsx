@@ -1,27 +1,30 @@
 import React from 'react';
-import { Alert, AlertIcon, AlertTitle, AlertDescription } from '@chakra-ui/react';
+import { Box, Flex, Heading, Text } from '@chakra-ui/react';
+import { CloseIcon } from '@chakra-ui/icons';
 
 const NotFoundPage: React.FC = () => {
   return (
-    <>
-      <Alert
-        status='error'
-        variant='subtle'
-        flexDirection='column'
-        alignItems='center'
-        justifyContent='center'
-        textAlign='center'
-        height='100vh'
-      >
-        <AlertIcon boxSize='40px' mr={0} />
-        <AlertTitle mt={4} mb={1} fontSize='lg'>
-          Page Not Found
-        </AlertTitle>
-        <AlertDescription maxWidth='sm'>
-          The page you are looking for does not exist
-        </AlertDescription>
-      </Alert>
-    </>
+    <Box textAlign="center" py={10} px={6}>
+      <Box display="inline-block">
+        <Flex
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+          bg={'red.500'}
+          rounded={'50px'}
+          w={'55px'}
+          h={'55px'}
+          textAlign="center">
+          <CloseIcon boxSize={'20px'} color={'white'} />
+        </Flex>
+      </Box>
+      <Heading as="h2" size="xl" mt={6} mb={2}>
+        Page Not Found
+      </Heading>
+      <Text color={'gray.500'}>
+        The page you are looking for does not exist
+      </Text>
+    </Box>
   )
 }
 

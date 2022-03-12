@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from '@chakra-ui/react';
+import SimpleBarReact from 'simplebar-react';
+import 'simplebar/dist/simplebar.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
     <ChakraProvider>
-      <App />
+      <SimpleBarReact style={{ maxHeight: '100vh' }}>
+        <App />
+      </SimpleBarReact>
     </ChakraProvider>
   </React.StrictMode>,
   document.getElementById('root')
