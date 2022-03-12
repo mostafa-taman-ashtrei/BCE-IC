@@ -4,6 +4,7 @@ import {
     Text, Button, Image
 } from '@chakra-ui/react';
 import Blob from '../components/HomePage/Blob';
+import Services from '../components/HomePage/Services';
 
 
 const HomePage: React.FC = () => {
@@ -93,6 +94,7 @@ const HomePage: React.FC = () => {
                     </Box>
                 </Flex>
             </Stack>
+            <Services />
         </Container>
     )
 }
