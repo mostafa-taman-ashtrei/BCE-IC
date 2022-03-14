@@ -1,4 +1,5 @@
 import { Navigate, Outlet } from 'react-router-dom';
+import AboutPage from '../pages/AboutPage';
 import HomePage from '../pages/HomePage';
 import NotFoundPage from '../pages/NotFoundPage';
 
@@ -9,7 +10,7 @@ const appRoutes = [
   },
   {
     path: '/about',
-    element: <h1>hi there</h1>,
+    element: <AboutPage />,
   },
   {
     path: '*',

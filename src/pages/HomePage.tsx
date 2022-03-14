@@ -57,6 +57,14 @@ const HomePage: React.FC = () => {
                             _hover={{ bg: 'red.500' }}>
                             Get started
                         </Button>
+                        <Button
+                            rounded={'full'}
+                            size={'lg'}
+                            fontWeight={'normal'}
+                            px={6}
+                        >
+                            Learn More
+                        </Button>
                     </Stack>
                 </Stack>
                 <Flex

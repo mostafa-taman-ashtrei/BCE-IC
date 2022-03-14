@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
 import { Box, SimpleGrid, Icon, Text, Stack, Flex } from '@chakra-ui/react';
 import services from '../../StaticData/services';
+import { v4 } from 'uuid';
 
 interface ServiceProps {
     title: string;
@@ -52,6 +53,7 @@ const Services: React.FC = () => {
             <SimpleGrid columns={{ base: 1, md: 3, }} spacing={4}>
                 {
                     services.english.map((service) => <Service
+                        key={v4()}
                         icon={<Icon as={service.icon} w={10} h={10} />}
                         title={service.title}
                         text={service.desc}
