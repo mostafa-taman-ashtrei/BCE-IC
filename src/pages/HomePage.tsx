@@ -19,7 +19,7 @@ const HomePage: React.FC = () => {
                     <Heading
                         lineHeight={1.1}
                         fontWeight={600}
-                        fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
+                        fontSize={{ base: '3xl', sm: '4xl', lg: '5xl' }}>
                         <Text
                             as={'span'}
                             position={'relative'}
@@ -37,11 +37,11 @@ const HomePage: React.FC = () => {
                         </Text>
                         <br />
                         <Text as={'span'} color={'red.400'}>
-                            Lorem Ipsum
+                            Chamber Of Commerce
                         </Text>
                     </Heading>
                     <Text color={'gray.500'}>
-                        The Al Ahram - Brazil - China - Egypt International Chamber of Commerce and Industry is an association
+                        Brazil - China - Egypt International Chamber of Commerce and Industry is an association
                         whose main objective is to foster closer ties between Arab countries, Brazil, China and Egypt
                     </Text>
                     <Stack

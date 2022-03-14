@@ -14,7 +14,7 @@ const Navbar: React.FC = () => (
                 fontWeight='semibold'
                 color="red.400"
             >
-                BCEIC
+                BCE-IC
             </Heading >
         </RouterLink>
 
