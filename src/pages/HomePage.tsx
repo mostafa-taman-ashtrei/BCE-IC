@@ -3,6 +3,7 @@ import { Container, Stack } from '@chakra-ui/react';
 import Services from '../components/HomePage/Services';
 import ImageSlider from '../components/misc/ImageSlider';
 import Hero from '../components/HomePage/Hero';
+import InvestingWidgets from '../components/HomePage/InvestingWidget';
 
 
 const HomePage: React.FC = () => {
@@ -18,6 +19,7 @@ const HomePage: React.FC = () => {
                 <ImageSlider />
             </Stack>
             <Services />
+            <InvestingWidgets />
         </Container>
     )
 }
