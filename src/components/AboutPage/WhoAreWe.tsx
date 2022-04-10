@@ -1,21 +1,44 @@
-import React from 'react';
-import { Stack, Heading, Text, Container, Divider, Box } from '@chakra-ui/react';
+import {
+    Box,
+    Container,
+    Heading,
+    SimpleGrid,
+    Icon,
+    Text,
+    Stack,
+    HStack,
+    VStack,
+} from '@chakra-ui/react';
+import { QuestionIcon } from '@chakra-ui/icons';
+import { v4 } from 'uuid';
+import aboutUsQuestions from '../../StaticData/aboutUsQuestions';
 
-const WhoAreWe: React.FC = () => {
+
+
+export default function WhoAreWe() {
     return (
-        <Container maxW={'7xl'} mt={2} as={Stack} spacing={12}>
-            <Box>
-                <Heading alignSelf="center" py={2}>Who Are We ?</Heading>
-                <Text >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolore, tempore impedit facilis itaque molestias illo maxime iusto! Excepturi nulla earum accusantium ut iure vero quam debitis maiores! Natus, blanditiis.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum omnis placeat nam, non impedit quia atque dignissimos exercitationem optio mollitia quasi id voluptate, neque quas ab iusto, vero assumenda.
-                    Nesciunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat doloribus possimus itaque, enim corrupti sunt exercitationem ut ab quibusdam facilis quod rem sequi placeat? Eos culpa impedit odit officiis accusamus.
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum dicta ducimus officiis itaque, laudantium, recusandae molestias adipisci mollitia iusto vel tempora sed alias excepturi odio? Dolores labore quo consequatur quae!
-                </Text>
-            </Box>
-            <Divider />
-        </Container>
-    )
-}
+        <Box p={4}>
+            <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
+                <Heading fontSize={'3xl'}>About Us</Heading>
+            </Stack>
 
-export default WhoAreWe
+            <Container maxW={'6xl'} mt={10}>
+                <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }} spacing={10}>
+                    {aboutUsQuestions.map((question) => (
+                        <HStack key={v4()} align={'top'}>
+                            <Box color={'red.400'} px={2}>
+                                <Icon as={QuestionIcon} />
+                            </Box>
+                            <VStack align={'start'}>
+                                <Text fontWeight={600}>{question.title}</Text>
+                                <Text color={'gray.600'}>{question.text}</Text>
+                            </VStack>
+
+                        </HStack>
+                    ))}
+                </SimpleGrid>
+            </Container>
+        </Box>
+
+    );
+}

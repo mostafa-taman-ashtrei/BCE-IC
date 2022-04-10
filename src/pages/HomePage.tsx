@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Stack } from '@chakra-ui/react';
-import Services from '../components/HomePage/Services';
 import ImageSlider from '../components/misc/ImageSlider';
 import Hero from '../components/HomePage/Hero';
 import InvestingWidgets from '../components/HomePage/InvestingWidget';
+import Services from '../components/HomePage/serviceSection/Services';
 
 
 const HomePage: React.FC = () => {
