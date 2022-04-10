@@ -8,12 +8,7 @@ const ThemeSwitch: React.FC = () => {
     return (
         <IconButton
             aria-label="Toggle Theme Switch"
-            // ml={8}
-            ml={1}
-            mr={2}
-            mt={2}
             icon={colorMode === 'dark' ? <SunIcon /> : <MoonIcon />}
-            isRound
             onClick={toggleColorMode}
         />
     );
