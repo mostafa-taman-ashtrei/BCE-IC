@@ -5,7 +5,6 @@ import {
     Heading,
     Text,
     Stack,
-    Container,
     Avatar,
     useColorModeValue,
     SimpleGrid,
@@ -91,33 +90,25 @@ const TestimonialAvatar = ({
 
 const TeamMembers: React.FC = () => {
     return (
-        <Box>
-            <Container maxW={'7xl'} py={10} as={Stack} spacing={12}>
-                <Stack spacing={0} align={'center'}>
-                    <Heading>Our Team</Heading>
-                    <Text>Our team includes experts in all fields to ensure that our work is of the highest quality</Text>
-                </Stack>
-                <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
-                    {
-                        team.english.map((member) => <Testimonial key={v4()}>
-                            <TestimonialContent>
-                                <TestimonialHeading>{member.name}</TestimonialHeading>
-                                <TestimonialText>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                                    neque sed imperdiet nibh lectus feugiat nunc sem.
-                                </TestimonialText>
-                            </TestimonialContent>
-                            <TestimonialAvatar
-                                src={member.avatar}
-                                name={member.name}
-                                title={member.postion}
-                            />
-                        </Testimonial>
-                        )
-                    }
-                </SimpleGrid>
-            </Container>
-        </Box>
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
+            {
+                team.english.map((member) => <Testimonial key={v4()}>
+                    <TestimonialContent>
+                        <TestimonialHeading>{member.name}</TestimonialHeading>
+                        <TestimonialText>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
+                            neque sed imperdiet nibh lectus feugiat nunc sem.
+                        </TestimonialText>
+                    </TestimonialContent>
+                    <TestimonialAvatar
+                        src={member.avatar}
+                        name={member.name}
+                        title={member.postion}
+                    />
+                </Testimonial>
+                )
+            }
+        </SimpleGrid>
     );
 }
 

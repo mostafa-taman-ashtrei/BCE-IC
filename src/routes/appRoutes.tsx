@@ -2,6 +2,7 @@ import { Navigate, Outlet } from 'react-router-dom';
 import AboutPage from '../pages/AboutPage';
 import HomePage from '../pages/HomePage';
 import NotFoundPage from '../pages/NotFoundPage';
+import TeamPage from '../pages/TeamPage';
 
 const appRoutes = [
   {
@@ -11,6 +12,10 @@ const appRoutes = [
   {
     path: '/about',
     element: <AboutPage />,
+  },
+  {
+    path: '/team',
+    element: <TeamPage />,
   },
   {
     path: '*',
