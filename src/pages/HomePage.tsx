@@ -1,25 +1,33 @@
 import React from 'react';
-import { Container, Stack } from '@chakra-ui/react';
-import ImageSlider from '../components/misc/ImageSlider';
+import { Container, useColorModeValue, Flex, Box } from '@chakra-ui/react';
 import Hero from '../components/HomePage/Hero';
 import InvestingWidgets from '../components/HomePage/InvestingWidget';
 import Services from '../components/HomePage/serviceSection/Services';
+import Photos from '../components/HomePage/Photos';
 
 
 const HomePage: React.FC = () => {
     return (
         <Container maxW={'7xl'}>
-            <Stack
-                align={'center'}
-                spacing={{ base: 8, md: 10 }}
-                py={{ base: 20, md: 10, lg: 5 }}
-                direction={{ base: 'column', md: 'row' }}
-            >
-                <Hero />
-                <ImageSlider />
-            </Stack>
+            <Hero />
             <Services />
-            <InvestingWidgets />
+            <Flex
+                w="full"
+                justifyContent="center"
+                alignItems="center"
+                pos="relative"
+            >
+                <Box
+                    shadow="xl"
+                    bg={useColorModeValue("white", "gray.800")}
+                    px={8}
+                    py={20}
+                    mx="auto"
+                >
+                    <InvestingWidgets />
+                    <Photos />
+                </Box>
+            </Flex>
         </Container>
     )
 }

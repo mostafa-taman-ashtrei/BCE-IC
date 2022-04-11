@@ -27,9 +27,9 @@ const ImageSlider: React.FC = () => {
     return (
         <Box
             position={'relative'}
-            height={'500px'}
-            rounded={'2xl'}
-            boxShadow={'2xl'}
+            height={'450px'}
+            rounded={'xl'}
+            boxShadow={'xl'}
             width={'full'}
             overflow={'hidden'}
         >
